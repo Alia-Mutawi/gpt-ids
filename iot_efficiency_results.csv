@@ -1,0 +1,3 @@
+model,features,model_package_mb,rows_benchmarked,mean_batch_latency_ms,p95_batch_latency_ms,mean_per_sample_ms,approx_rss_delta_mb
+Full Stacking,27,55.42448043823242,10000,110.7670337001764,117.03389115009486,0.01107670337001764,0.0078125
+Lightweight XGBoost,10,6.06736946105957,10000,7.651201999942714,8.704511250562064,0.0007651201999942714,0.0
