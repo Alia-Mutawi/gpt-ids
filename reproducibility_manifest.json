@@ -1,0 +1,65 @@
+{
+  "random_state": 42,
+  "common_feature_count": 27,
+  "common_features": [
+    "active_max",
+    "active_mean",
+    "active_min",
+    "active_std",
+    "bwd_iat_max",
+    "bwd_iat_mean",
+    "bwd_iat_min",
+    "bwd_iat_std",
+    "bwd_psh_flags",
+    "bwd_urg_flags",
+    "cwe_flag_count",
+    "down/up_ratio",
+    "flow_duration",
+    "flow_iat_max",
+    "flow_iat_mean",
+    "flow_iat_min",
+    "flow_iat_std",
+    "fwd_iat_max",
+    "fwd_iat_mean",
+    "fwd_iat_min",
+    "fwd_iat_std",
+    "fwd_psh_flags",
+    "fwd_urg_flags",
+    "idle_max",
+    "idle_mean",
+    "idle_min",
+    "idle_std"
+  ],
+  "rf_best_params": {
+    "max_depth": 20,
+    "max_features": "sqrt",
+    "min_samples_split": 5,
+    "n_estimators": 200
+  },
+  "xgb_best_params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.05,
+    "max_depth": 8,
+    "n_estimators": 300,
+    "subsample": 0.8
+  },
+  "top10_shap_features": [
+    "flow_iat_mean",
+    "fwd_iat_max",
+    "flow_duration",
+    "fwd_iat_min",
+    "flow_iat_min",
+    "fwd_iat_mean",
+    "flow_iat_std",
+    "bwd_iat_std",
+    "flow_iat_max",
+    "bwd_iat_mean"
+  ],
+  "xgb_device": "cuda",
+  "oof_feature_count": 6,
+  "notes": [
+    "Preprocessing is fitted on training data only.",
+    "Stratified train/test split ensures equal representation of Botnet, Slowloris, and Benign classes.",
+    "The lightweight model is a standalone XGBoost model using the top 10 SHAP features."
+  ]
+}
